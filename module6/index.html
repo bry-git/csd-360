@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+</head>
+    <body>
+        <h3>CSD 360 - Module 6</h3>
+        <h5>Fibonacci numbers</h5>
+        <script>
+            const fibSeq = () => {
+                let accumulator = 1
+                const seq = [1, 1]
+
+                document.write("1 : 1 <br\>")
+                document.write("2 : 1 <br\>")
+
+                for(let i = 0; i < 28; i++) {
+                    accumulator += seq[i]
+                    document.write(`${i + 3} : ${accumulator} <br\>`)
+                    seq.push(accumulator)
+                }
+            }
+            fibSeq()
+        </script>
+    </body>
+<html>

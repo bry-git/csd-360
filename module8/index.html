@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+</head>
+    <body>
+        <h3>CSD 360 - Module 8</h3>
+        <table id="table">
+            <tbody id="tbody">
+                <tr>
+                    <th>Initial Value</th>
+                    <th>Square Root</th>
+                    <th>Power of 2</th>
+                    <th>Power of 3</th>
+                </tr>
+            </tbody>
+        </table>
+        <style>
+            table {
+                margin: 0 0 0 4em ;
+            }
+            th {
+                padding: 2em;
+            }
+            td {
+                text-align: center;
+            }
+            tr:nth-child(odd) {
+                background: #ffffff;
+            }
+            tr:nth-child(even) {
+                background: #f4f4f4;
+            }
+        </style>
+        <script>
+            const table = document.getElementById("tbody")
+            for (let i = 4; i <= 14; i++) {
+                const row = document.createElement('tr')
+                    const initialValue = document.createElement('td'); initialValue.innerHTML = `${i}`
+                    const squareRoot = document.createElement('td'); squareRoot.innerHTML = `${Math.sqrt(i).toFixed(2)}`
+                    const powerOfTwo = document.createElement('td'); powerOfTwo.innerHTML = `${Math.pow(i, 2)}`
+                    const powerOfThree = document.createElement('td'); powerOfThree.innerHTML = `${Math.pow(i, 3)}`
+                    row.appendChild(initialValue)
+                    row.appendChild(squareRoot)
+                    row.appendChild(powerOfTwo)
+                    row.appendChild(powerOfThree)
+                    table.appendChild(row)
+            }
+        </script>
+    </body>
+<html>

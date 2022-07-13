@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+    <body>
+        <h3>CSD 360 - Module 9</h3>
+            <script>
+                const nums = [0, 9, 4, 3, -1, 0, -2, 7, 8, 11, 0, 2, -3, 6, 8, -1, 0]
+                document.write("original array : ", nums.toString(), "<br\>")
+                let zeros = 0
+                let greaterThanZero = []
+                let lessThanZero = []
+
+                nums.forEach((i) => {
+                    if(i == 0) {
+                        zeros++
+                    } else if(i > 0) {
+                        greaterThanZero.push(i)
+                    } else if(i < 0) {
+                        lessThanZero.push(i)
+                    }
+                })
+                document.write("number of zeros : ", zeros, "<br\>")
+                document.write("numbers greater than zero : ", `${greaterThanZero.length}`, " : ", greaterThanZero.toString(), "<br\>")
+                document.write("numbers less than zero : ", `${lessThanZero.length}`, " : ", lessThanZero.toString(), "<br\>")
+            </script>
+        </body>
+<html>

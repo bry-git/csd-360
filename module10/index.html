@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+    <head>
+        <style>
+            body {
+                transition: 1.5s;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 0 10% 0 10%;
+                font-family: Roboto
+            }
+            p {
+                width: 80%;
+            }
+            pre {
+                margin: 0 10% 0 10%;
+            }
+            button {
+                width: 8em;
+                background-color: #62aaf1;
+                border: none;
+                color: white;
+                padding: 8px 15px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                border-radius: 7px;
+            }
+            button.light {
+                background-color: #62aaf1;
+            }
+            button.dark {
+                background-color: #303768;
+            }
+
+        </style>
+        <script>
+            const handleModeSwitch = () => {
+                let mode = document.getElementById("toggle-mode")
+                if(mode.className == "light") {
+                    mode.innerText = "Light Mode";
+                    mode.className = "dark";
+                    document.body.style.backgroundColor = "#141D26";
+                    document.body.style.color = "#fff";
+                } else {
+                    mode.innerText = "Dark Mode"
+                    mode.className = "light";
+                    document.body.style.backgroundColor = "#fff";
+                    document.body.style.color = "#000";
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <h3>CSD 360 - Module 10</h3>
+    <p>this page will allow you to change the CSS properties of certain elements of the page with the
+    JavaScript below. Click the button to toggle the appearance of the page between light and dark mode.</p>
+        <pre>
+            <code class="language-js">
+        const handleModeSwitch = () => {
+            let mode = document.getElementById("toggle-mode")
+            if(mode.className == "light") {
+                mode.innerText = "Light Mode";
+                mode.className = "dark";
+                document.body.style.backgroundColor = "#141D26";
+                document.body.style.color = "#fff";
+            } else {
+                mode.innerText = "Dark Mode"
+                mode.className = "light";
+                document.body.style.backgroundColor = "#fff";
+                document.body.style.color = "#000";
+            }
+        }
+            </code>
+        </pre>
+        <button id="toggle-mode" class="light" onclick="handleModeSwitch()">Dark Mode</button>
+    </body>
+<html>
